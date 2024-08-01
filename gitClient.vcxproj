@@ -113,7 +113,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\gitClient\intializeRepo;D:\gitClient\FileOperations;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\gitClient\Config;D:\gitClient\IOOperations;D:\gitClient\intializeRepo;D:\gitClient\FileOperations;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,7 +128,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\gitClient\intializeRepo;D:\gitClient\FileOperations;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\gitClient\Config;D:\gitClient\IOOperations;D:\gitClient\intializeRepo;D:\gitClient\FileOperations;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,11 +138,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Config\config.cpp" />
     <ClCompile Include="FileOperations\FileOperations.cpp" />
     <ClCompile Include="intializeRepo\init.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Config\config.h" />
     <ClInclude Include="FileOperations\FileOperations.h" />
     <ClInclude Include="intializeRepo\init.h" />
   </ItemGroup>

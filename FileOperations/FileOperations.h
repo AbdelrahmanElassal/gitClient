@@ -1,12 +1,13 @@
 #pragma once
-#include <string>
+#include<fstream>
+#include<filesystem>
+#include<string>
+#include<iostream>
 using namespace std;
+namespace fs = std::filesystem;
+
 namespace FileOperation {
 	string getCurrentPath();
-
-	bool checkFileExistance(string);
-
-	bool checkFolderExistance(string );
 
 	void createFile(string);
 

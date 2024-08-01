@@ -24,12 +24,18 @@
     <ClCompile Include="FileOperations\FileOperations.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Config\config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="intializeRepo\init.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FileOperations\FileOperations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

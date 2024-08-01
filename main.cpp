@@ -9,10 +9,6 @@ using namespace std;
 int main(int argc, char** argv)
 {
     
-    std::string authorName;
-    std::cout << "Enter author name: ";
-    std::getline(std::cin, authorName);
-  
     std::string current_exec_name = argv[0]; // Name of the current exec program
     std::vector<std::string> all_args;
     if (argc > 1)
@@ -25,8 +21,7 @@ int main(int argc, char** argv)
     
     
     if (all_args.size() >= 1 && all_args[0] == "init") {
-        Init::Intialize();
-        cout << "tmam";
+        Init::InitCommand();
     }
     else {
         cout << "m4 tmam";

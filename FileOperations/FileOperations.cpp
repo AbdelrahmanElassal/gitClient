@@ -1,23 +1,10 @@
-#include<fstream>
-#include<filesystem>
-#include<string>
-#include<iostream>
-using namespace std;
-namespace fs = std::filesystem;
+#include"FileOperations.h"
 
 namespace FileOperation {
 	string getCurrentPath() {
 		return fs::current_path().string();
 	}
 
-	/*bool checkFileExistance(char*) {
-
-	}
-
-	bool checkFolderExistance(char*) {
-
-	}
-	*/
 
 	void createFile(string file_name) {
 		string cpath = getCurrentPath();

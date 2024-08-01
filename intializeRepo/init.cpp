@@ -1,37 +1,30 @@
-#include"init.h"
-#include"FileOperations.h"
-#include<iostream>
-using namespace std;
+#include"config.h"
+
 namespace Init{
 
-	/*
-	* 
-	* take username 
-	* take e,ail
-	* create .gitclient directory
-	* save un and email in config
-	* 
-	*/
 
 	void Intialize() {
-		bool f = FileOperation::createFolder(".gitRepo");
-		f= FileOperation::createFolder(".gitRepo\\objects");
-		f = FileOperation::createFolder(".gitRepo\\hooks");
-		f = FileOperation::createFolder(".gitRepo\\refs");
+		FileOperation::createFolder(".gitRepo\\objects");
+		FileOperation::createFolder(".gitRepo\\hooks");
+		FileOperation::createFolder(".gitRepo\\refs");
 		FileOperation::createFile(".gitRepo\\HEAD.txt");
-		FileOperation::createFile(".gitRepo\\config.txt");
 		FileOperation::createFile(".gitRepo\\description.txt");
-
-
-	}
-
-
-	void ReIntialize() {
+		FileOperation::createFile(".gitRepo\\config.txt");
+		unordered_map<string, string> conf = config::readConfigFromUser();
+		config::writeConfig(".gitRepo\\config.txt", conf);
 
 	}
+
 
 	void InitCommand() {
-
+		bool f = FileOperation::createFolder(".gitRepo");
+		if (f) {
+			Intialize();
+			cout << "Successfully intialized as a git repo" << endl;
+		}
+		else {
+			cout << "Already intialized as a git repo" << endl;
+		}
 
 	}
 }
