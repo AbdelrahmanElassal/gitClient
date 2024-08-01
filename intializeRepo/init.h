@@ -1,5 +1,6 @@
 #pragma once
 #include"init.h"
+#include"config.h"
 #include"FileOperations.h"
 #include<iostream>
 using namespace std;

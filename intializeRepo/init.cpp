@@ -1,4 +1,4 @@
-#include"config.h"
+#include"init.h"
 
 namespace Init{
 
