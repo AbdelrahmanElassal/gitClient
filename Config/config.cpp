@@ -4,9 +4,9 @@
 namespace config {
     std::unordered_map<std::string, std::string> readConfigFromUser() {
         std::unordered_map<std::string, std::string> config;
-        std::cout << "Enter Author's name";
+        std::cout << "Enter Author's name" << std::endl;
         std::getline(std::cin, config["Author"]);
-        std::cout << "Enter Author's email";
+        std::cout << "Enter Author's email" <<std::endl;
         std::getline(std::cin, config["email"]);
         return config;
     }
@@ -32,7 +32,8 @@ namespace config {
         return config;
     }
 
-    // Function to write configuration file
+
+
     void writeConfig(const std::string& filename, const std::unordered_map<std::string, std::string>& config) {
         std::ofstream file(filename);
         if (file.is_open()) {
